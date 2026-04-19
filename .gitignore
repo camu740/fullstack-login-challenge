@@ -16,10 +16,7 @@ target/
 mvnw
 mvnw.cmd
 
-# AI specific artifacts (internal use)
-implemention_plan.md
-task.md
-walkthrough.md
+# specific artifacts (internal use)
 *.png
 *.jpg
 *.svg
