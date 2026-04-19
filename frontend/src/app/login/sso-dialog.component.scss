@@ -1,0 +1,114 @@
+@import '../../assets/scss/1-settings/variables';
+
+.sso-dialog-container {
+  min-width: 400px;
+  max-width: 500px;
+
+  h2[mat-dialog-title] {
+    display: flex;
+    align-items: center;
+    gap: $spacing-m;
+    color: $neutral-20;
+    margin-bottom: $spacing-m;
+    
+    mat-icon {
+      color: $primary;
+    }
+  }
+
+  .dialog-instruction {
+    color: $neutral-40;
+    margin-bottom: $spacing-l;
+    font-size: $font-s;
+  }
+
+  .certs-table-container {
+    border: 1px solid $neutral-80;
+    border-radius: $border-radius-s;
+    overflow: hidden;
+    margin-bottom: $spacing-m;
+
+    .certs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+
+      th {
+        background-color: $neutral-95;
+        color: $neutral-40;
+        text-align: left;
+        padding: $spacing-s $spacing-m;
+        font-weight: 500;
+        border-bottom: 1px solid $neutral-80;
+        border-right: 1px solid $neutral-90;
+        
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      td {
+        padding: $spacing-m;
+        color: $neutral-20;
+        border-right: 1px solid $neutral-95;
+        border-bottom: 1px solid $neutral-95;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      tbody tr {
+        cursor: pointer;
+        transition: background-color 0.1s;
+        user-select: none; 
+
+        &:hover {
+          background-color: $neutral-99;
+        }
+
+        &:active {
+          background-color: #005696;
+          color: $white;
+        }
+
+        &.selected {
+          background-color: #004a80 !important; // Stronger blue
+          color: $white !important;
+
+          td {
+            color: $white !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+
+      .serial-cell {
+        font-family: monospace;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}
+
+mat-dialog-actions {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center;
+  gap: $spacing-s;
+  padding: $spacing-m 0;
+  width: 100%;
+
+  .accept-btn {
+    background-color: #005696;
+    border-radius: 20px;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 $spacing-m;
+    
+    &[disabled] {
+      background-color: $neutral-90;
+      color: $neutral-60;
+    }
+  }
+}

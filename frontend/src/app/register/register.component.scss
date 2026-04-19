@@ -1,0 +1,55 @@
+@import '../../assets/scss/1-settings/variables';
+
+// Reuse login styles as they are part of the same design system
+@import '../login/login.component.scss';
+
+.spinner-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $spacing-s;
+}
+
+.password-field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-m; // Give space before the confirm password field
+  
+  mat-form-field {
+    margin-bottom: 0; // The container will handle spacing
+  }
+}
+
+.strength-meter-container {
+  margin-top: $spacing-s;
+  padding: 0 4px;
+  
+  mat-progress-bar {
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: $spacing-xs;
+  }
+  
+  .strength-label {
+    font-size: $font-xs;
+    color: $neutral-40;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $spacing-xs;
+    line-height: 1.2;
+    
+    .primary { color: #2e7d32; font-weight: 600; }
+    .accent { color: #ef6c00; font-weight: 600; }
+    .warn { color: #c62828; font-weight: 600; }
+  }
+}
+
+// Ensure the form wrapper handles height changes smoothly
+.login-form-wrapper {
+  overflow-y: auto;
+  max-height: 90vh;
+  padding-bottom: $spacing-m;
+  
+  display: flex;
+  flex-direction: column;
+}

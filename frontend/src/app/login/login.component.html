@@ -1,0 +1,78 @@
+<div class="login-container">
+  <div class="login-left">
+    <img src="assets/images/login.svg" alt="Login Illustration" class="illustration">
+  </div>
+  <div class="login-right">
+    <div class="login-form-wrapper">
+      <div class="logo-container">
+        <img src="assets/images/logos/Logo-RD.svg" alt="Realdooh Logo" class="main-logo">
+      </div>
+
+      <h2 class="title">{{ 'LOGIN.TITLE' | translate }}</h2>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'LOGIN.EMAIL' | translate }}</mat-label>
+          <input matInput formControlName="email" type="email" placeholder="user@example.com">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            {{ 'VALIDATION.REQUIRED' | translate }}
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            {{ 'VALIDATION.EMAIL' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password">
+          <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
+            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            {{ 'VALIDATION.REQUIRED' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" class="full-width login-button" [disabled]="loading || loginForm.invalid">
+          {{ 'LOGIN.SUBMIT' | translate | uppercase }}
+        </button>
+
+        <div class="divider">
+          <span>{{ 'LOGIN.OTHER_METHODS' | translate }}</span>
+        </div>
+
+        <button mat-flat-button class="full-width sso-button" type="button" (click)="onSsoLogin()" [disabled]="loading">
+          {{ 'LOGIN.SSO' | translate | uppercase }}
+        </button>
+
+        <div class="register-link" [class.disabled-link]="loading">
+          {{ 'LOGIN.NO_ACCOUNT' | translate }} <a [routerLink]="loading ? null : '/register'">{{ 'LOGIN.REGISTER' | translate }}</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="language-selector">
+        <mat-icon>public</mat-icon>
+        <span>{{ 'LANGUAGE.LABEL' | translate }}: {{ currentLang | uppercase }}</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="loading">
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="switchLang('es')">ES</button>
+          <button mat-menu-item (click)="switchLang('en')">EN</button>
+          <button mat-menu-item (click)="switchLang('fr')">FR</button>
+          <button mat-menu-item (click)="switchLang('pt')">PT</button>
+        </mat-menu>
+      </div>
+      <img src="assets/images/logos/Econocom.svg" alt="Econocom Logo" class="footer-logo">
+    </div>
+  </div>
+
+  <!-- Full screen loading overlay -->
+  <div class="loading-overlay" *ngIf="loading">
+    <div class="overlay-content">
+      <mat-spinner diameter="60"></mat-spinner>
+    </div>
+  </div>
+</div>

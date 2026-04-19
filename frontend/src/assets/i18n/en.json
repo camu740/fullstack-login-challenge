@@ -1,0 +1,60 @@
+{
+  "LOGIN": {
+    "TITLE": "Log in to your account",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SUBMIT": "Log In",
+    "OTHER_METHODS": "Other access methods:",
+    "SSO": "Log in with SSO",
+    "NO_ACCOUNT": "Don't have an account?",
+    "REGISTER": "Sign Up",
+    "SUCCESS": "Login successful!",
+    "ERROR": "Invalid credentials or server error"
+  },
+  "REGISTER": {
+    "TITLE": "Create your account",
+    "SUCCESS": "Account created successfully! You can now log in.",
+    "ERROR": "Error creating account. Email might already be in use.",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "PASSWORD_MISMATCH": "Passwords do not match",
+    "PASSWORD_MIN": "Password must be at least 8 characters long",
+    "PASSWORD_PATTERN": "Must have: Uppercase, Lowercase, Number and Symbol",
+    "STRENGTH": {
+      "LABEL": "Password strength",
+      "WEAK": "Very Weak",
+      "FAIR": "Weak",
+      "GOOD": "Fair",
+      "STRONG": "Strong",
+      "EXCELLENT": "Excellent"
+    },
+    "SUBMIT": "Sign Up",
+    "HAVE_ACCOUNT": "Already have an account?",
+    "LOGIN_HERE": "Log in here"
+  },
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL": "Enter a valid email address"
+  },
+  "LANGUAGE": {
+    "LABEL": "Language"
+  },
+  "HOME": {
+    "WELCOME": "Welcome",
+    "SUCCESS_MESSAGE": "You have successfully authenticated in the system.",
+    "EMAIL": "Email Address",
+    "ROLES": "Roles / Permissions",
+    "LOGOUT": "Log Out"
+  },
+  "SSO": {
+    "DIALOG_TITLE": "Select a certificate",
+    "SELECT_CERT": "Select a certificate to authenticate your identity at realdooh.com.",
+    "COLUMN_SUBJECT": "Subject",
+    "COLUMN_ISSUER": "Issuer",
+    "COLUMN_SERIAL": "Serial number",
+    "DATA_BTN": "Certificate Details"
+  },
+  "COMMON": {
+    "CANCEL": "Cancel",
+    "ACCEPT": "Accept"
+  }
+}

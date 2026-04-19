@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+dist/
+.angular/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.log
+
+# Build
+target/
+*.class
+.mvn/
+mvnw
+mvnw.cmd
+
+# AI specific artifacts (internal use)
+implemention_plan.md
+task.md
+walkthrough.md
+*.png
+*.jpg
+*.svg
+!frontend/src/assets/images/**/*.svg
+!frontend/src/assets/images/**/*.png
+!frontend/src/assets/images/**/*.jpg
+
+# OS
+.DS_Store
+Thumbs.db

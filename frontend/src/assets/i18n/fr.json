@@ -1,0 +1,60 @@
+{
+  "LOGIN": {
+    "TITLE": "Connectez-vous à votre compte",
+    "EMAIL": "E-mail",
+    "PASSWORD": "Mot de passe",
+    "SUBMIT": "Se connecter",
+    "OTHER_METHODS": "Autres méthodes d'accès :",
+    "SSO": "Se connecter avec SSO",
+    "NO_ACCOUNT": "Vous n'avez pas de compte ?",
+    "REGISTER": "Inscrivez-vous",
+    "SUCCESS": "Connexion réussie !",
+    "ERROR": "Identifiants invalides ou erreur serveur"
+  },
+  "REGISTER": {
+    "TITLE": "Créez votre compte",
+    "SUCCESS": "Compte créé avec succès ! Vous pouvez maintenant vous connecter.",
+    "ERROR": "Erreur lors de la création du compte. L'e-mail est peut-être déjà utilisé.",
+    "CONFIRM_PASSWORD": "Confirmer le mot de passe",
+    "PASSWORD_MISMATCH": "Les mots de passe ne correspondent pas",
+    "PASSWORD_MIN": "Le mot de passe doit comporter au moins 8 caractères",
+    "PASSWORD_PATTERN": "Doit avoir : Majuscule, Minuscule, Chiffre et Symbole",
+    "STRENGTH": {
+      "LABEL": "Force du mot de passe",
+      "WEAK": "Très faible",
+      "FAIR": "Faible",
+      "GOOD": "Moyenne",
+      "STRONG": "Forte",
+      "EXCELLENT": "Excellente"
+    },
+    "SUBMIT": "S'inscrire",
+    "HAVE_ACCOUNT": "Vous avez déjà un compte ?",
+    "LOGIN_HERE": "Connectez-vous ici"
+  },
+  "VALIDATION": {
+    "REQUIRED": "Ce champ est obligatoire",
+    "EMAIL": "Entrez une adresse e-mail valide"
+  },
+  "LANGUAGE": {
+    "LABEL": "Langue"
+  },
+  "HOME": {
+    "WELCOME": "Bienvenue",
+    "SUCCESS_MESSAGE": "Vous avez été authentifié avec succès dans le système.",
+    "EMAIL": "E-mail",
+    "ROLES": "Rôles / Permissions",
+    "LOGOUT": "Se déconnecter"
+  },
+  "SSO": {
+    "DIALOG_TITLE": "Sélectionner un certificat",
+    "SELECT_CERT": "Sélectionnez un certificat pour authentifier votre identité sur realdooh.com.",
+    "COLUMN_SUBJECT": "Sujet",
+    "COLUMN_ISSUER": "Émetteur",
+    "COLUMN_SERIAL": "Numéro de série",
+    "DATA_BTN": "Détails du certificat"
+  },
+  "COMMON": {
+    "CANCEL": "Annuler",
+    "ACCEPT": "Accepter"
+  }
+}

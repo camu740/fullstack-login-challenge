@@ -1,0 +1,60 @@
+{
+  "LOGIN": {
+    "TITLE": "Entre na sua conta",
+    "EMAIL": "E-mail",
+    "PASSWORD": "Senha",
+    "SUBMIT": "Entrar",
+    "OTHER_METHODS": "Outras formas de acesso:",
+    "SSO": "Entrar com SSO",
+    "NO_ACCOUNT": "Não tem uma conta?",
+    "REGISTER": "Cadastre-se",
+    "SUCCESS": "Login bem-sucedido!",
+    "ERROR": "Credenciais inválidas ou erro no servidor"
+  },
+  "REGISTER": {
+    "TITLE": "Crie sua conta",
+    "SUCCESS": "Conta criada com sucesso! Agora você pode fazer login.",
+    "ERROR": "Erro ao criar conta. O e-mail pode já estar em uso.",
+    "CONFIRM_PASSWORD": "Confirmar Senha",
+    "PASSWORD_MISMATCH": "As senhas não coincidem",
+    "PASSWORD_MIN": "A senha deve ter pelo menos 8 caracteres",
+    "PASSWORD_PATTERN": "Deve ter: Maiúscula, Minúscula, Número e Símbolo",
+    "STRENGTH": {
+      "LABEL": "Força da senha",
+      "WEAK": "Muito Fraca",
+      "FAIR": "Fraca",
+      "GOOD": "Média",
+      "STRONG": "Forte",
+      "EXCELLENT": "Excelente"
+    },
+    "SUBMIT": "Cadastrar-se",
+    "HAVE_ACCOUNT": "Já tem uma conta?",
+    "LOGIN_HERE": "Faça login aqui"
+  },
+  "VALIDATION": {
+    "REQUIRED": "Este campo é obrigatório",
+    "EMAIL": "Insira um e-mail válido"
+  },
+  "LANGUAGE": {
+    "LABEL": "Idioma"
+  },
+  "HOME": {
+    "WELCOME": "Bem-vindo",
+    "SUCCESS_MESSAGE": "Você foi autenticado com sucesso no sistema.",
+    "EMAIL": "E-mail",
+    "ROLES": "Papéis / Permissões",
+    "LOGOUT": "Sair"
+  },
+  "SSO": {
+    "DIALOG_TITLE": "Selecionar um certificado",
+    "SELECT_CERT": "Selecione um certificado para autenticar sua identidade em realdooh.com.",
+    "COLUMN_SUBJECT": "Assunto",
+    "COLUMN_ISSUER": "Emissor",
+    "COLUMN_SERIAL": "Número de série",
+    "DATA_BTN": "Dados do certificado"
+  },
+  "COMMON": {
+    "CANCEL": "Cancelar",
+    "ACCEPT": "Aceitar"
+  }
+}

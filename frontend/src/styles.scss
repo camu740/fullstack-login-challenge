@@ -1,0 +1,40 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+/* You can add global styles to this file, and also import other style files */
+// Plus imports for other components in your app.
+/*********************************************/
+@import "assets/scss/4-generic/_normalize";
+@import "assets/scss/4-generic/_reset";
+/*********************************************/
+
+//Add anything you need to use globally here
+//example: @import "assets/scss/4-generic/_typography";
+@import "assets/scss/1-settings/_variables";
+@import "assets/scss/3-tools/breakpoints";
+@import "assets/scss/3-tools/notouch-hover";
+@import "assets/scss/3-tools/fluid-type";
+@import "assets/scss/3-tools/nth-child";
+
+// Global Fix for Material MDC Input vertical alignment
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-form-field-infix {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+input.mat-mdc-input-element {
+  margin-top: 0 !important;
+  line-height: 1.5 !important;
+}
+
+// Condense language selector menu items
+.mat-mdc-menu-content {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.mat-mdc-menu-item {
+  min-height: 36px !important;
+  font-size: 13px !important;
+  padding: 0 16px !important;
+}

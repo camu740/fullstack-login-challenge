@@ -1,0 +1,41 @@
+<div class="sso-dialog-container">
+  <h2 mat-dialog-title>
+    <mat-icon>security</mat-icon>
+    {{ 'SSO.DIALOG_TITLE' | translate }}
+  </h2>
+  
+  <mat-dialog-content>
+    <p class="dialog-instruction">{{ 'SSO.SELECT_CERT' | translate }}</p>
+    
+    <div class="certs-table-container">
+      <table class="certs-table">
+        <thead>
+          <tr>
+            <th>{{ 'SSO.COLUMN_SUBJECT' | translate }}</th>
+            <th>{{ 'SSO.COLUMN_ISSUER' | translate }}</th>
+            <th>{{ 'SSO.COLUMN_SERIAL' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cert of certificates" 
+              [class.selected]="selectedId === cert.id"
+              (click)="selectedId = cert.id">
+            <td>{{ cert.name }}</td>
+            <td>{{ cert.issuer }}</td>
+            <td class="serial-cell">{{ cert.serial }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">{{ 'COMMON.CANCEL' | translate }}</button>
+    <button mat-flat-button color="primary" 
+            [disabled]="!selectedId" 
+            (click)="onSelect()"
+            class="accept-btn">
+      {{ 'COMMON.ACCEPT' | translate }}
+    </button>
+  </mat-dialog-actions>
+</div>

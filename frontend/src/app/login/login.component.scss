@@ -1,0 +1,190 @@
+@import '../../assets/scss/1-settings/variables';
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: $white;
+}
+
+.login-left {
+  flex: 1;
+  background-color: $neutral-99; // Light gray as in figma
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl;
+
+  .illustration {
+    max-width: 90%;
+    max-height: 80%;
+  }
+}
+
+.login-right {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-xxl $spacing-xl $spacing-m;
+  position: relative;
+}
+
+.login-form-wrapper {
+  flex: 1;
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo-container {
+  margin-bottom: $spacing-xxl;
+  display: flex;
+  justify-content: flex-end;
+
+  .main-logo {
+    height: 60px;
+  }
+}
+
+.title {
+  font-family: $font-stack;
+  font-size: $font-m;
+  color: $neutral-20;
+  margin-bottom: $spacing-l;
+  font-weight: 400;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: $spacing-m;
+}
+
+.login-button {
+  height: 48px;
+  background-color: $primary !important;
+  color: $white;
+  font-weight: 500;
+  margin-top: $spacing-m;
+  border-radius: $border-radius-s;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: $spacing-l 0;
+  color: $neutral-40;
+  font-size: $font-s;
+
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid $neutral-80;
+  }
+
+  span {
+    padding: 0 $spacing-m;
+  }
+}
+
+.sso-button {
+  height: 48px;
+  background-color: #3b49df !important; // Decathlon-like blue
+  color: $white;
+  font-weight: 500;
+  border-radius: $border-radius-s;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: $spacing-m;
+  color: $neutral-40;
+  font-size: $font-s;
+
+  &.disabled-link {
+    opacity: 0.6;
+    pointer-events: none;
+    
+    a {
+      cursor: default;
+    }
+  }
+
+  a {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  
+  .overlay-content {
+    background-color: $white;
+    padding: $spacing-xl;
+    border-radius: $border-radius-m;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-l;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    p {
+      color: $neutral-20;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-xs;
+  color: $neutral-40;
+
+  .language-selector {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    
+    mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .footer-logo {
+    height: 30px;
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 900px) {
+  .login-left {
+    display: none;
+  }
+  .login-right {
+    width: 100%;
+  }
+}

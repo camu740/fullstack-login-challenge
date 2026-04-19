@@ -1,0 +1,140 @@
+@import '../../assets/scss/1-settings/variables';
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $neutral-99;
+  padding: $spacing-m;
+}
+
+.home-card {
+  background-color: $white;
+  border-radius: $border-radius-m;
+  padding: $spacing-xxl;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-xxl;
+
+  .home-logo {
+    height: 50px;
+  }
+}
+
+.language-selector {
+  .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $neutral-40;
+    
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+
+  .welcome-title {
+    font-family: $font-stack;
+    font-size: $font-xl;
+    color: $neutral-20;
+    margin-bottom: $spacing-s;
+    font-weight: 500;
+
+    .user-highlight {
+      color: $primary;
+    }
+  }
+
+  .welcome-subtitle {
+    color: $neutral-40;
+    font-size: $font-m;
+  }
+}
+
+.user-info-section {
+  background-color: $neutral-95;
+  border-radius: $border-radius-s;
+  padding: $spacing-l;
+  margin-bottom: $spacing-xxl;
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-m;
+    margin-bottom: $spacing-l;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    mat-icon {
+      color: $neutral-40;
+    }
+
+    .info-text {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-size: $font-xs;
+        color: $neutral-40;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .value {
+        font-size: $font-m;
+        color: $neutral-20;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.roles-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+  margin-top: $spacing-xs;
+
+  .role-chip {
+    background-color: $primary;
+    color: $white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: $font-xs;
+    font-weight: 500;
+  }
+}
+
+.actions-section {
+  display: flex;
+  justify-content: center;
+
+  .logout-button {
+    height: 48px;
+    padding: 0 $spacing-xl;
+    border-radius: $border-radius-s;
+    display: flex;
+    align-items: center;
+    gap: $spacing-s;
+  }
+}
