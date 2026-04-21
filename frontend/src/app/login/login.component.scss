@@ -38,7 +38,7 @@
 }
 
 .logo-container {
-  margin-bottom: $spacing-xxl;
+  margin-bottom: $spacing-l;
   display: flex;
   justify-content: flex-end;
 
@@ -49,39 +49,36 @@
 
 .title {
   font-family: $font-stack;
-  font-size: $font-m;
+  font-size: $font-l;
   color: $neutral-20;
-  margin-bottom: $spacing-l;
+  margin-bottom: $spacing-s;
   font-weight: 400;
+  text-align: center;
 }
 
 .full-width {
   width: 100%;
-  margin-bottom: $spacing-m;
+  margin-bottom: $spacing-s;
 }
 
 .login-button {
   height: 48px;
   background-color: $primary !important;
-  color: $white;
+  color: $white !important;
   font-weight: 500;
-  margin-top: $spacing-m;
+  margin-top: $spacing-s;
   border-radius: $border-radius-s;
 }
 
 .divider {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: $spacing-l 0;
+  margin: $spacing-s 0;
   color: $neutral-40;
   font-size: $font-s;
-
-  &::before, &::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid $neutral-80;
-  }
+  font-weight: 700;
 
   span {
     padding: 0 $spacing-m;
@@ -91,16 +88,17 @@
 .sso-button {
   height: 48px;
   background-color: #3b49df !important; // Decathlon-like blue
-  color: $white;
+  color: $white !important;
   font-weight: 500;
   border-radius: $border-radius-s;
 }
 
 .register-link {
   text-align: center;
-  margin-top: $spacing-m;
+  margin-top: $spacing-s;
   color: $neutral-40;
   font-size: $font-s;
+  font-weight: 700;
 
   &.disabled-link {
     opacity: 0.6;
@@ -113,8 +111,8 @@
 
   a {
     color: $primary;
-    text-decoration: none;
-    font-weight: 500;
+    text-decoration: underline;
+    font-weight: 700;
     cursor: pointer;
 
     &:hover {

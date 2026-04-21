@@ -11,7 +11,7 @@
       <h2 class="title">{{ 'LOGIN.TITLE' | translate }}</h2>
 
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="outline" class="full-width">
+        <mat-form-field appearance="outline" class="full-width" hideRequiredMarker="true">
           <mat-label>{{ 'LOGIN.EMAIL' | translate }}</mat-label>
           <input matInput formControlName="email" type="email" placeholder="user@example.com">
           <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
@@ -22,7 +22,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" class="full-width">
+        <mat-form-field appearance="outline" class="full-width" hideRequiredMarker="true">
           <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
           <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password">
           <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
@@ -54,7 +54,7 @@
     <div class="footer">
       <div class="language-selector">
         <mat-icon>public</mat-icon>
-        <span>{{ 'LANGUAGE.LABEL' | translate }}: {{ currentLang | uppercase }}</span>
+        <span>{{ 'LANGUAGE.LABEL' | translate | uppercase }}: {{ currentLang | uppercase }}</span>
         <button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="loading">
           <mat-icon>expand_more</mat-icon>
         </button>

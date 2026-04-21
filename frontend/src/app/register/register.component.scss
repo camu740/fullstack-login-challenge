@@ -12,7 +12,7 @@
 .password-field-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: $spacing-m; // Give space before the confirm password field
+  margin-bottom: $spacing-s; // Reduce space before the confirm password field
   
   mat-form-field {
     margin-bottom: 0; // The container will handle spacing
